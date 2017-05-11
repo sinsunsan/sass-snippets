@@ -1,12 +1,14 @@
 /**
- * @name 
- * @description When you  have 2 elements 
- * One that display on hover 
- * The other one that display by default 
- * 
+ * @name
+ * @description When you  have 2 elements
+ * One that display on hover
+ * The other one that display by default
+ * The 2 img or div are absolutely positioned
+ * So that they apear exactly at the same place
+ *
  * Such as 2 images (grey and colored)
  * image-color.png is shown only on hover
- * 
+ *
  * @example html
  * <div class="hover-display">
  *    <img src="image-grey.png" class="no-hover">
@@ -17,13 +19,23 @@
   transition-delay: 0.5s;
   transition-property: opacity;
   transition-timing-function: ease-in-out;
-  &.hover {
+
+  position: relative;
+  .hover,
+  .no-hover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .hover {
     opacity: 1;
     &:hover {
       opacity: 0;
     }
   }
-  &.no-hover {
+  .no-hover {
     opacity: 0;
     &:hover {
       opacity: 1;
