@@ -1,0 +1,32 @@
+/**
+ * @name 
+ * @description When you  have 2 elements 
+ * One that display on hover 
+ * The other one that display by default 
+ * 
+ * Such as 2 images (grey and colored)
+ * image-color.png is shown only on hover
+ * 
+ * @example html
+ * <div class="hover-display">
+ *    <img src="image-grey.png" class="no-hover">
+ *    <img src="image-color.png" class="hover">
+ * </div>
+ */
+.ss-hover-display {
+  transition-delay: 0.5s;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  &.hover {
+    opacity: 1;
+    &:hover {
+      opacity: 0;
+    }
+  }
+  &.no-hover {
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
