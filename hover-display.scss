@@ -30,15 +30,15 @@
     right: 0;
   }
   .hover {
-    opacity: 1;
-    &:hover {
-      opacity: 0;
-    }
-  }
-  .no-hover {
     opacity: 0;
     &:hover {
       opacity: 1;
+    }
+  }
+  .no-hover {
+    opacity: 1;
+    &:hover {
+      opacity: 0;
     }
   }
 }
